@@ -53,7 +53,7 @@ var server = http.createServer(function(request, response) {
 });
 
 server.listen(process.env.PORT || 3000, function() {
-  console.log("Server listening on port ." + process.env.PORT || 3000);
+  console.log("Server listening on port 3000.");
 });
 
 var chatServer = require('./lib/chat_server');
