@@ -53,8 +53,10 @@ var server = http.createServer(function(request, response) {
 });
 
 server.listen(process.env.PORT || 3000, function() {
-  console.log("Server listening on port 3000.");
-});
+  var port = process.env.PORT ? process.env.PORT : 3000;
+  console.log("Server listening on port " +  port + ".");
+}); 
 
 var chatServer = require('./lib/chat_server');
+// 与http服务器共享tcp/ip端口
 chatServer.listen(server);
